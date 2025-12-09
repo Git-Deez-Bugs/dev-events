@@ -54,6 +54,7 @@ export default async function EventDetailsPage({
   );
   const {
     event: {
+      _id: id,
       title,
       description,
       overview,
@@ -137,7 +138,7 @@ export default async function EventDetailsPage({
               <p className="text-sm">Be the first to book your spot</p>
             )}
 
-            <BookEvent />
+            <BookEvent eventId={id} slug={slug}/>
           </div>
         </aside>
       </div>
